@@ -36,7 +36,7 @@ Loc::loadMessages(__FILE__);
 	<div class="column">
 		<div class="card project-card">
 			<header class="card-header is-<?=htmlspecialcharsbx(strtolower($task->getPriority()->getName()));?>">
-				<a class="card-header-title" href="/tasks/edit/<?= htmlspecialcharsbx($task->getId())?>">
+				<a class="card-header-title" href="/tasks/edit/<?= htmlspecialcharsbx($task->getId())?>/">
 					<?= htmlspecialcharsbx($task->getName()) ?>
 				</a>
 				<button class="card-header-icon" aria-label="more options">
