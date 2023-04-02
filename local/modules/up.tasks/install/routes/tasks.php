@@ -10,4 +10,6 @@ return function (RoutingConfigurator $routes) {
 	$routes->get('/tasks/create/', new PublicPageController('/local/modules/up.tasks/views/task-create.php'));
 	$routes->post('/tasks/create/', new PublicPageController('/local/modules/up.tasks/views/task-create.php'));
 	$routes->get('/tasks/delete/', new PublicPageController('/local/modules/up.tasks/views/task-delete.php'));
+	$routes->get('/tasks/edit/{id}', new PublicPageController('/local/modules/up.tasks/views/task-details.php'));
+	$routes->post('/tasks/edit/{id}', new PublicPageController('/local/modules/up.tasks/views/task-details.php'));
 };

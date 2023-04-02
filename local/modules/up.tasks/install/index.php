@@ -71,6 +71,13 @@ class up_tasks extends CModule
 			true,
 			true
 		);
+
+		CopyDirFiles(
+			$_SERVER['DOCUMENT_ROOT'] . '/local/modules/up.tasks/lang',
+			$_SERVER['DOCUMENT_ROOT'] . '/local/lang/',
+			true,
+			true
+		);
 	}
 
 	public function uninstallFiles(): void
@@ -114,14 +121,14 @@ class up_tasks extends CModule
 		}
 
 		$step = (int)$step;
-		if($step < 2)
+		if ($step < 2)
 		{
 			$APPLICATION->IncludeAdminFile(
 				Loc::getMessage('UP_TASKS_UNINSTALL_TITLE'),
 				$_SERVER['DOCUMENT_ROOT'] . '/local/modules/' . $this->MODULE_ID . '/install/unstep1.php'
 			);
 		}
-		elseif($step === 2)
+		elseif ($step === 2)
 		{
 			$this->uninstallDB();
 			$this->uninstallFiles();

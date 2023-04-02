@@ -30,7 +30,7 @@ __tasksMigrate(2, function($updater, $DB)
 {
 	if ($updater->CanUpdateDatabase())
 	{
-		$DB->query("INSERT IGNORE INTO up_bus.up_tasks_priority(NAME)
+		$DB->query("INSERT IGNORE INTO up_tasks_priority(NAME)
 		VALUES ('Hight'),('Medium'),('Low');");
 	}
 });
